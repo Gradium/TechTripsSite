@@ -13,10 +13,10 @@ require.config({
 	}
 });
 
-require(['app'], function (App) {
-	// use app here
-	React.renderComponent(
-		App(null ),
-		document.getElementById('app')
-	);
-});
+// require(['app'], function (App) {
+// 	// use app here
+// 	React.renderComponent(
+// 		<App />,
+// 		document.getElementById('app')
+// 	);
+// });

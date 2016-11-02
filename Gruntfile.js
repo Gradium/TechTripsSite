@@ -1,4 +1,4 @@
-// Generated on 2016-10-29 using generator-react 0.0.2
+// Generated on 2016-11-02 using generator-react 0.0.2
 'use strict';
 
 // # Globbing
