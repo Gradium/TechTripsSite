@@ -1,29 +1,97 @@
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+body	{ 
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
+.bg-all{
+	background:url(../images/background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height: 650px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	z-index: -1;
+}
+.logo-center-desk{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.patrocinio{
+    margin-top: 100px;
+	position: relative;
+	height: 650px;
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.logo-center-desk img{
+    height: 250px;
+    object-fit: contain;
+}
+
+.patrocinadores{
+    margin-top: 5px;
+}
+
+.patrocinio-item img{
+    width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .patrocinio-item{
+        max-width: 200px;
+    }
+    .patrocinio{
+        margin-top: 45px;
+    }
+    .patrocinadores{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.live-notificacao{
+	height: 100px;
+	width: 100%;
+	text-align: center;
+	padding-top: 40px;
+	position: absolute;
+	bottom: 0px;
+}
+
+.live{
+	background-color: #c85e17;
+}
+
+.notLive{
+	background-color: #323131;
+}
+
+.live .notOn{
+	display: none;
+}
+
+.notLive .on{
+	display: none;
+}
+
+.live .on a{
+	color: #FFF;
+}
+
+.notLive .notOn{
+	color: #FFF;
+}
+
+
+
+.mapa img{
+	width: 100%;
 }

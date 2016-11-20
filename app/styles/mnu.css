@@ -1,3 +1,127 @@
 .mnu{
     position: relative;
+    color: #FFF;
 }
+
+.navbar{
+    padding: 0;
+}
+
+.bg-mnu{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    background: #000;
+    z-index: -100;
+}
+
+.bg-mnu-btn-top{
+    background-color: transparent;
+    padding: 0px;
+}
+
+.mnu-nav{
+    margin-top: 1px;
+}
+
+.logo-home{
+    max-height: 57px;
+}
+
+.mnu-principal a{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    color: #FFF;
+    line-height: 3em;
+}
+
+.mnu-principal a:hover{
+    text-decoration: none;
+}
+
+.nav-mnu {
+    width: 100%;
+}
+
+.nav-social{
+    height: 20px;
+}
+
+.nav-mnu li{
+    float: right;
+    width: 20%;
+    text-align: right;
+}
+
+.nav-mnu .social{
+    padding-top: 2px;
+}
+
+
+/* TOP MENU */
+.fixedMnu {
+    float: left;
+}
+
+.sepMnu {
+    float: left;
+    width: 1rem;
+}
+
+.navbar-toggler {
+    float: right;
+}
+        
+.navbar-toggler {
+    color: #FFF;
+}
+
+@media screen and (max-width: 420px) {
+    .sepMnu {
+        float: none;
+        height: 0px;
+        clear: both;
+    }
+    .navbar-toggleable-xs .nav-item{
+        text-align: right;
+    }
+}
+
+@media (max-width: 1199px) {
+    .navbar .navbar-nav > li > a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+.navbar, .navbar.navbar-default {
+    background-color: #601B48;
+    color: rgba(255,255,255,.84);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link{
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+}
+
+#menu-mobile li{
+    text-align: right;
+}
+
+.logo-home-mobile{
+    height: 30px;
+}
+
+.mnu-float-mobile{
+    float: right;
+}
+
+/* TOP MENU - END*/
