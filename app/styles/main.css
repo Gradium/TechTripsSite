@@ -1,10 +1,10 @@
 body	{ 
 	font-family: 'Raleway', sans-serif;
-	font-size: 13px;
+	font-size: 15px;
 }
 
 .bg-all{
-	background:url(../images/background.png) no-repeat center center fixed; 
+	background:url('../images/background.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -91,7 +91,63 @@ body	{
 }
 
 
-
 .mapa img{
 	width: 100%;
+}
+
+.conteudo{
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    z-index: 100;
+}
+
+.destaque-ul{
+    width: 100%;
+}
+.destaque-li{
+    float: left;
+    width: 25%;
+}
+
+@media screen and (max-width: 992px) {
+    .destaque-li{
+        float: none;
+        width: 100%;
+    }
+}
+
+.destaque-ct{
+    margin: 7px;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+.destaque-ct-tx{
+    background: #FFF;
+}
+
+.destaque-ct-img img{
+    width: 100%;
+}
+
+.destaque-ct-tx a,
+.destaque-ct-tx a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+.destaque-ct-tx h2{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.destaque-ct-tx p{
+    padding: 8px;
+}
+
+footer{
+    background: #323131;
+    color: #FFF;
 }
