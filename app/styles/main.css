@@ -150,4 +150,48 @@ body	{
 footer{
     background: #323131;
     color: #FFF;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+@media screen and (max-width: 992px) {
+    footer{
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+}
+
+.footer-menu div{
+    padding: 0px;
+    text-align: center;
+}
+
+.footer-menu div a,
+.footer-menu div a:hover{
+    color: #FFF;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.footer-menu{
+    min-height: 35px;
+}
+
+.footer-form p{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-patrocinador{
+    min-height: 50px;
+    padding: 5px 5px;
+}
+.footer-patrocinador img{
+    width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .footer-patrocinador{
+        padding: 0 10%;
+    }
 }
