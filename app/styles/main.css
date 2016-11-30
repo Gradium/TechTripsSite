@@ -195,3 +195,12 @@ footer{
         padding: 0 10%;
     }
 }
+
+.carousel-sec{
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.carousel-inner > .carousel-item > div > img{
+  max-width: 100%;
+  height: auto;
+}
