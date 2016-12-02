@@ -22,15 +22,13 @@ body	{
     align-items: center;
 }
 
-.patrocinio{
-    margin-top: 100px;
-	position: relative;
-	height: 650px;
-}
-
 .logo-center-desk img{
     height: 250px;
     object-fit: contain;
+}
+
+.patrocinio{
+    padding-top: 150px;
 }
 
 .patrocinio-item{
@@ -44,9 +42,6 @@ body	{
 @media screen and (max-width: 992px) {
     .patrocinio-item{
         max-width: 200px;
-    }
-    .patrocinio{
-        margin-top: 45px;
     }
     .patrocinadores{
         width: 100%;

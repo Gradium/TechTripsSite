@@ -13,12 +13,19 @@ var topConfig = {
         var me = this;
         var size = me.getSize();
         var hg = this.getHeight();
-        $('.patrocinadores').css('marginTop', size == 'lg' ? hg - 500 : size == 'md' ? hg - 580 : 120);
+        
+        $('.patrocinadores').css('marginTop', size == 'lg' ? hg - 650 : size == 'md' ? hg - 600 : 0);
+        $('.patrocinio').height( me.getHeight() -150);
+        
+        if(size == 'sm'){
+            $('.patrocinio').css('paddingTop', 120);
+        }
+
     }
     , configureTop: function(){
         var me = this;
         var size = me.getSize();
-        $('.patrocinio').height( me.getHeight() - (size == 'lg' ? 100 : size == 'md' ? 50 : 120) );
+        $('.patrocinio').height( me.getHeight() ); //- (size == 'lg' ? 100 : -120) 
         // $('.live-notificacao').css('margin-top', (me.getSize() == 'lg' ? -80 : -50));
 
         

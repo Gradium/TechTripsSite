@@ -27,6 +27,9 @@
     padding: 0px;
 }
 
+.mnu-mobile{
+    z-index: 10000;
+}
 .mnu-nav{
     margin-top: 1px;
 }
