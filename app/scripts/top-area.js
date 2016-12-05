@@ -21,6 +21,18 @@ var topConfig = {
             $('.patrocinio').css('paddingTop', 120);
         }
 
+        if(hg < 745){
+            $('.text-techtrip').hide();
+        }else{
+            $('.text-techtrip').show();
+        }
+
+        if(hg < 700){
+            $('.logo-center-desk').hide();
+        }else{
+            $('.logo-center-desk').show();
+        }
+
     }
     , configureTop: function(){
         var me = this;
@@ -36,4 +48,7 @@ var topConfig = {
 
 $(document).ready(function() {
 	topConfig.configureTop();
+    $( window ).resize(function() {
+        topConfig.configureTop();
+    });
 });
