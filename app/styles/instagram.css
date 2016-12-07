@@ -3,6 +3,10 @@
     overflow-y: auto;
 }
 
+#instafeed .item{
+    width: 20%;
+}
+
 .modal-header{
     position: relative;
     z-index: 10000;
