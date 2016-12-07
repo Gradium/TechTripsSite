@@ -2483,16 +2483,16 @@ return Outlayer;
 
 
 
-$(function () {
+// $(function () {
 
-    var $container = $('#containerImg').masonry({
-        itemSelector: '.item',
-        columnWidth: 200
-    });
+//     var $container = $('#containerImg').masonry({
+//         itemSelector: '.item',
+//         columnWidth: 200
+//     });
 
-    // reveal initial images
-    $container.masonryImagesReveal($('#images').find('.item'));
-});
+//     // reveal initial images
+//     $container.masonryImagesReveal($('#images').find('.item'));
+// });
 
 $.fn.masonryImagesReveal = function ($items) {
     var msnry = this.data('masonry');

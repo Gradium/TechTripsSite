@@ -44,11 +44,19 @@ var topConfig = {
          $('.bg-all').height( me.getHeight() );
          me.fixToBot();
     }
+
+    // , configureModalInsta : function(){
+    //     var size = me.getSize();
+    //     size = size * 0.9;
+    //     $('##modal-instagram .modal-content').height(size);
+    // }
 }
 
 $(document).ready(function() {
 	topConfig.configureTop();
+	//topConfig.configureModalInsta();
     $( window ).resize(function() {
         topConfig.configureTop();
+        // topConfig.configureModalInsta();
     });
 });

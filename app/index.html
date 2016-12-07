@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/mnu.css">
+        <link rel="stylesheet" href="styles/instagram.css">
         <!-- endbuild -->
 
     </head>
@@ -290,43 +291,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div id="containerImg"></div>
-                        <div id="images">
-                            <div class="item">
-                                <img src="http://lorempixel.com/425/299/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/190/292/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/520/329/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/404/176/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/530/290/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/228/200/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/207/316/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/435/162/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/376/175/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/508/338/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/404/389/nature">
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/216/304/nature">
-                            </div>
+                        <div id="instafeed">
                         </div>
                     </div>
                 </div>
@@ -392,6 +357,8 @@
             </div>
         </footer>
 
+        <div id="instafeed"></div>
+
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -409,14 +376,34 @@
   </div>
 </div>
 
+<div id="modal-instagram" class="modal fade insta-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
 
-        <!--<div class="container" style="height:500px; background-color:#000">
-            <div style="background-color:#cc0">teste <br>   <br><br><br> </div>
-            <div style="margin-left:10%;margin-right:10%;height:1500px;background-color:#FFF">corpo</div>
-        </div>-->
-        <!--<div id="app"></div>-->
-
-
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="container">
+              <div class="row ct-insta-txt">
+                  <div class="ct-insta-profile col-md-3">
+                      <div id="profileImage"></div>
+                  </div>
+                  <div class="ct-insta-profile-id col-md-9">
+                        <div id="profile"></div>
+                        <div id="caption"></div>
+                  </div>
+              </div>
+          </div>
+          <div id="ct-insta-img">
+            <img id="insta-foto" />
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -425,6 +412,7 @@
         
         <!-- build:js scripts/vendor/react-with-addons.min.js -->
         <script src="bower_components/react/react-with-addons.min.js"></script>
+        <script src="bower_components/instafeed.js/instafeed.min.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/material.js -->
@@ -450,6 +438,35 @@
         <script src="scripts/images.js"></script>
         <!-- endbuild -->
         
+        <script type="text/javascript">
+            var userFeed = new Instafeed({
+                get: 'user',
+                userId: '503185979',
+                clientId: 'ed314ad3e5a649d9b32b82427566f8cc',
+                accessToken: '503185979.ed314ad.fd92b89f2f7145c8aa6926664ccd98b9',
+                template: `<div class="item">
+                            <a href="javascript:void(0)"  data-img="{{model.images.standard_resolution.url}}" data-username="{{model.caption.from.username}}" data-userphoto="{{model.caption.from.profile_picture}}" data-caption="{{model.caption.text}}" data-toggle="modal" data-target=".insta-modal-lg" id="{{id}}">
+                                <img src="{{image}}">
+                            </a>
+                        </div> `,
+                sortBy: 'random',
+                limit: 30,
+                links: false,
+            });
+            userFeed.run();
+
+            $('.insta-modal-lg').on('shown.bs.modal', function (e) {
+                var el = e.relatedTarget;
+                var profileImage = $(el).attr('data-userphoto'); 
+                var src = $(el).attr('data-img');
+                var caption = $(el).attr('data-caption');
+                var profile = $(el).attr('data-username');
+                $('#insta-foto').attr('src', src);
+                $('#profileImage').attr('style', "background-image: url('" + profileImage +"')");
+                $('#caption').html(caption);
+                $('#profile').html('@' + profile);
+            })
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
