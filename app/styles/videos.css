@@ -1,0 +1,32 @@
+.modal-title-video{
+    text-align: justify;
+    text-indent: 50px;
+    padding-right: 30px;
+    height: 140px;
+}
+
+#modal-videos .modal-body h4{
+    font-weight: bold;
+}
+
+#modal-videos .videos{
+    padding-top: 20px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#modal-videos .video-item{
+    padding-top: 4px;
+}
+
+#modal-videos a,
+#modal-videos a:hover,{
+    text-decoration: none;
+}
+
+#modal-videos .video-title{
+    height: 35px;
+    font-size: 0.8em;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

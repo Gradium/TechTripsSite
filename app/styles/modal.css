@@ -1,0 +1,10 @@
+@media screen and (max-width: 992px) {
+    #modal-instagram .modal-content,
+    #modal-videos     .modal-content{ 
+        margin-top: 50px;
+    }
+
+    #modal-videos .modal-body{
+        margin-top: 30px;
+    }
+}
