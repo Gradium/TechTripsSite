@@ -27,6 +27,8 @@
         <link rel="stylesheet" href="styles/modal.css">
         <link rel="stylesheet" href="styles/instagram.css">
         <link rel="stylesheet" href="styles/videos.css">
+        <link rel="stylesheet" href="styles/naestrada.css">
+        <link rel="stylesheet" href="styles/blog.css">
         <!-- endbuild -->
 
     </head>
@@ -54,23 +56,18 @@
                                 </div>-->
                                 <ul class="nav-mnu nav-social">
                                     <li class="social">
-                                        <a href="#" target="_blank" class="btn bg-mnu-btn-top" aria-label="Instagram">
+                                        <a href="https://www.instagram.com/viniciusenger/" target="_blank" class="btn bg-mnu-btn-top" aria-label="Instagram">
                                             <i class="mdi mdi-light mdi-instagram" aria-hidden="true"></i>
                                         </a>
                                     </li>
                                     <li class="social">
-                                        <a href="#" target="_blank" class="btn bg-mnu-btn-top" aria-label="Twitter">
+                                        <a href="https://twitter.com/yarasenger?lang=en" target="_blank" class="btn bg-mnu-btn-top" aria-label="Twitter">
                                             <i class="mdi mdi-light mdi-twitter" aria-hidden="true"></i>
                                         </a>
                                     </li>
                                     <li class="social">
                                         <a href="https://www.facebook.com/techtripsenger/" target="_blank" class="btn bg-mnu-btn-top" aria-label="Facebook">
                                             <i class="mdi mdi-light mdi-facebook" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li class="social">
-                                        <a href="#" class="btn bg-mnu-btn-top" aria-label="Busca">
-                                            <i class="mdi mdi-light mdi-magnify" aria-hidden="true"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -92,11 +89,11 @@
                             <div class="row">
                                 <ul class="nav-mnu">
                                     <li class="mnu-principal-item">
-                                        <a href="#">
+                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-demo">
                                             Demos
                                         </a>
                                     </li>
-                                    <li class="mnu-principal-item">
+                                    <li class="mnu-principal-item" style="display:none;">
                                         <a href="#">
                                             Albuns
                                         </a>
@@ -106,13 +103,13 @@
                                             Videos
                                         </a>
                                     </li>
-                                    <li class="mnu-principal-item">
+                                    <li style="display:none;" class="mnu-principal-item">
                                         <a href="#">
                                             Ao Vivo
                                         </a>
                                     </li>
                                     <li class="mnu-principal-item">
-                                        <a href="#">
+                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-naEstrada">
                                             A Viagem
                                         </a>
                                     </li>
@@ -145,43 +142,20 @@
                 <div style="clear:both"></div>
                 <div class="collapse navbar-toggleable-md" id="menu-mobile">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">A Viagem<span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target="#modal-naEstrada">A Viagem</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target=".bd-example-modal-lg">Videos</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" style="display:none;">
                             <a class="nav-link" href="#">Albuns</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Demos</a>
-                        </li>
-                    </ul>
-                    <!--<form class="form-inline float-lg-right">
-                    <input class="form-control" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>-->
-                </div>
-                
-                <!--<div class="fixedMnu">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="javascript: showContent('sobre');" href="javascript:void(0);" data-toggle="sobre">Sobre o projeto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="javascript: showContent('patrocinador');">Seja patrocinador</a>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-demo">Demos</a>
                         </li>
                     </ul>
                 </div>
-                <div class="sepMnu">&nbsp;</div>
-                <div class="collapse navbar-toggleable-xs" id="othersMenu">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="javascript: showContent('press');">Press release</a>
-                        </li>
-                    </ul>
-                </div>-->
             </div>
         </nav>
         <section class="patrocinio">
@@ -194,7 +168,7 @@
                         <p>A Tech Trip é uma viagem de 40 dias de Motorhome, realizada pela Família Senger no Vale do Silício que se inicia no dia 13 de dezembro de 2016 e se encerra no dia 25 de janeiro de 2017. Através deste web site, você poderá acompanhar toda viagem através de vídeos, fotos, transmissões ao vivo e relatos da experiência.
                         </p>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 patrocinio-item">
+                    <div class="col-lg-2 col-md-4 hidden-md-down patrocinio-item"> <!--col-sm-6 col-xs-6 -->
                         <!--<img src="images/patrocinador-default.png" alt="">-->
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 patrocinio-item">
@@ -214,13 +188,13 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="link-live">
-                <div class="live-notificacao live">
-                <!--<div class="live-notificacao notLive">-->
+            <!--<a href="#" class="link-live">-->
+                <!--<div class="live-notificacao live">-->
+                <div class="live-notificacao notLive">
                     <p class="on">Estamos ao vivo! Clique e acompanhe nossa transmissão!</p>
-                    <p class="notOn">No momento não estamos ao vivo - Próxima transmissão doa 12/11</p>
+                    <p class="notOn" >No momento não estamos ao vivo</p>
                 </div>
-            </a>
+            <!--</a>-->
         </section>
         <div style="clear:both"></div>
         <section class="conteudo">
@@ -228,7 +202,7 @@
                 <div class="row">
                     <ul class="destaque-ul">
                         <li class="destaque-li">
-                            <a href="#">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-naEstrada">
                                 <div class="destaque-ct">
                                     <div class="destaque-ct-img">
                                         <img src="images/naestrada.png" alt="">
@@ -254,7 +228,7 @@
                             </a>
                         </li>
                         <li class="destaque-li">
-                            <a href="#">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-vlog">
                                 <div class="destaque-ct">
                                     <div class="destaque-ct-img">
                                         <img src="images/vlog360.png" alt="">
@@ -267,7 +241,7 @@
                             </a>
                         </li>
                         <li class="destaque-li">
-                            <a href="#">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-blog">
                                 <div class="destaque-ct">
                                     <div class="destaque-ct-img">
                                         <img src="images/blog.png" alt="">
@@ -288,7 +262,7 @@
             <img src="images/mapa.png" />
         </section>
 
-        <section class="carousel-sec">
+        <section style="display:none;" class="carousel-sec">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -308,20 +282,20 @@
                     <div class="col-md-5 col-sm-12 col-xs-12 ">
                         <div class="footer-menu">
                             <div class="col-md-3 col-sm-6 col-xs-6">
-                                <a href="#">A Viagem</a>
+                                <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-naEstrada">A Viagem</a>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-6">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-videos">Vídeos</a>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="col-md-3 col-sm-6 col-xs-6" style="display:none;">
                                 <a href="#">Álbuns</a>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-6">
-                                <a href="#">Demos</a>
+                                <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-demo">Demos</a>
                             </div>
                         </div>
                         <div style="clear:both;"></div>
-                        <div class="footer-form">
+                        <div class="footer-form" style="display:none;">
                             <p>Quer ser o primeiro a saber de tudo sobre a Tech Trip?</p>
                             <p>Cadastre seu e-mail e acompanhe de perto esta viagem.</p>
                             <form action="#" class="form-inline">
@@ -361,7 +335,9 @@
 
         <div id="instafeed"></div>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+
+<div id="modal-naEstrada" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
@@ -369,81 +345,108 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 id="myLargeModalLabel">Large modal</h4>
       </div>
       <div class="modal-body">
-          ...
+          <div class="content-naEstrada top-modal">
+              <div class="box-img-naEstrada naEstrada-img1">
+              </div>
+              <div class="txt-naEstrada">
+                  <h2>Embarque nessa Trip com a Família Senger</h2>
+                  <p>Quem não ama viajar por lugares incríveis e encontrar amigos? Agora junte isso com a liberdade de um Motorhome e um roteiro pelo Vale do Silício visitando os maiores players de Tecnologia do mundo e conhecendo oficinas de Internet das Coisas e tantos outros espaços incríveis.</p>
+                  <p>Assim será a Tech Trip, uma viagem de 40 dias de Motorhome, realizada pela Família Senger no Vale do Silício que se inicia no dia 13 de dezembro de 2016 e se encerra no dia 25 de janeiro de 2017. Através deste website, você poderá acompanhar toda viagem através de vídeos, fotos, transmissões ao vivo e relatos da experiência.</p>
+                  <p>Todos os conteúdos estarão organizados no site para que você possa encontrar tudo sobre a nossa empreitada e as pessoas cadastradas serão notificadas sempre que acontecer uma live ou  novos conteúdos forem adicionado.</p>
+              </div>
+
+              <div class="box-img-naEstrada naEstrada-img2">
+              </div>
+              <div class="txt-naEstrada">
+                  <h2>Lugares incríveis por onde a Tech Trip vai passar</h2>
+                  <p>A Tech Trip foi pensada para que você tenha uma ideia bacana de como funciona uma viagem de Motorhome no Vale do Silício e conheça diversos lugares e iniciativas interessantes por lá. Além dos locais, também visitaremos alguns amigos que moram no Vale e vão dar um panorama completo sobre sua vida, trabalho, despesas e outras curiosidades sobre a capital da tecnologia mundial. </p>
+                  <p>Alguns eventos que farão parte da rota da viagem:</p>
+                  <ul>
+                      <li>"Live Sharks Tank®" episode _ demo+pitch &amp; VIP-party.</li>
+                      <li>Meetup SVHealth Monthly Meetup na Plug &amp; Play</li>
+                      <li>SixFlags - O parque das montanhas russas em Napa Valley</li>
+                      <li>Halfmoon Bay RV park organizando o RV</li>
+                      <li>Berkely Arduino &amp; Raspberry Pi Meetup</li>
+                      <li>Visita a Netflix</li>
+                      <li>Visita Stanford e DSchool</li>
+                  </ul>
+              </div>
+
+              <div class="box-img-naEstrada naEstrada-img3">
+              </div>
+              <div class="txt-naEstrada">
+                  <h2>Conteúdos que serão desenvolvidos na Tech Trip</h2>
+                  <p>A Tech Trip vai apresentar diversos conteúdos em vídeo, fotos e textos, além de disponibilizar os códigos dos demos aplicados durante a viagem. Veja alguns dos principais conteúdos:</p>
+                  <p><span>Daily Vlog 360</span> - Um apanhado diário do que está rolando na Tech Trip aproveitando a tecnologia 360 para você se sentir dentro da viagem. Dicas, Curiosidades e muito mais.</p>
+                  <p><span>Live Stream</span> - Todas as Terças e Sexta, fique ligado que entraremos ao vivo às 20h (15h horário da Califórnia) para bater um papo com os Embarcados e apresentar coisas legais sobre a Tech Trip! :)</p>
+                  <p><span>Maker</span> - Vídeos com tutoriais e bate papos sobre Maker, IoT e tudo que for relacionado a esse universo.</p>
+                  <p><span>Motorhome</span> - Tudo que você precisa saber sobre como cuidar de seu Motorhome, quais as dificuldades, custos e tudo mais.</p>
+                  <p><span>Educação</span> - Visitas e papos sobre aprendizado e conhecimento além de suas fronteiras!</p>
+                  <p><span>Dicas e Curiosidades</span> - Tudo de interessante que reunimos para falar mais do Vale do Silício: Entrevistas, Reuniões e muita descontração com Surf, Skate e muito mais! </p>
+              </div>
+          </div>
       </div>
     </div>
   </div>
 </div>
 
-<div id="modal-videos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="modal-videos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <p class="modal-title-video">Qual a melhor maneira de conhecer o Vale do Silício sem sair de sua cadeira? E aprender mais sobre IoT, desenvolvimento de soluções e negócios da economia criativa? Estes são os conteúdos que você vai encontrar aqui, com a experiência dos Senger nestas áreas e um super alto astral. E claro, vai ver também dicas de surf, comida e viagens de motorhome. Aproveite com a gente!.</p>
       </div>
       <div class="modal-body">
-        <div class="container">
-              <div class="row"> 
-                  <div class="col-md-3 video-maker">
-                      <h4>Maker</h4>
-                      <div class="videos">
-                          <a href="#">
-                            <div class="video-item">
-                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
-                            </div>
-                            <p class="video-title">Texto sobre o video</p>
-                          </a>
-                          <a href="#">
-                            <div class="video-item">
-                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
-                            </div>
-                            <div class="box-multline-doted video-title">
-                                Texto sobre o video explicando alguma bagaça com um texto um pouco maior pra ver ocupar duas linhas do baralho
-                            </div>
-                          </a>
-                      </div>
-                  </div>
-                  <div class="col-md-3 video-motorhome">
-                      <h4>Motorhome</h4>
-                      <div class="videos">
-                          <a href="#">
-                            <div class="video-item">
-                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
-                            </div>
-                            <p class="video-title">Texto sobre o video explicando alguma bagaça</p>
-                          </a>
-                          <a href="#">
-                            <div class="video-item">
-                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
-                            </div>
-                            <p class="video-title">Texto sobre o video</p>
-                          </a>
-                      </div>
-                  </div>
-                  <div class="col-md-3 video-educacao">
-                      <h4>Educação</h4>
-                      <div class="videos">
-                          <a href="#">
-                            <div class="video-item">
-                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
-                            </div>
-                            <p class="video-title">TEXTO SOBRE O VIDEO</p>
-                          </a>
-                      </div>
-                  </div>
-                  <div class="col-md-3 video-dicas">
-                      <h4>Dicas e Curiosidades</h4>
-                      <div class="videos">
-                      </div>
-                  </div>
-              </div>
+          <div class="video-header">
+              <p class="modal-title-video">Qual a melhor maneira de conhecer o Vale do Silício sem sair de sua cadeira? E aprender mais sobre IoT, desenvolvimento de soluções e negócios da economia criativa? Estes são os conteúdos que você vai encontrar aqui, com a experiência dos Senger nestas áreas e um super alto astral. E claro, vai ver também dicas de surf, comida e viagens de motorhome. Aproveite com a gente!.</p>
           </div>
+        <div class="video-container">
+            <iframe width="640" height="352" src="https://www.youtube.com/embed/t5eklk-IDKc" frameborder="0" allowfullscreen></iframe>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-vlog" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="video-header">
+              <p class="modal-title-video">Qual a melhor maneira de conhecer o Vale do Silício sem sair de sua cadeira? E aprender mais sobre IoT, desenvolvimento de soluções e negócios da economia criativa? Estes são os conteúdos que você vai encontrar aqui, com a experiência dos Senger nestas áreas e um super alto astral. E claro, vai ver também dicas de surf, comida e viagens de motorhome. Aproveite com a gente!.</p>
+          </div>
+        <div class="video-container">
+            <iframe width="640" height="352" src="https://www.youtube.com/embed/t5eklk-IDKc" frameborder="0" allowfullscreen></iframe>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-demo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="video-header">
+              <p class="modal-title-video">Qual a melhor maneira de conhecer o Vale do Silício sem sair de sua cadeira? E aprender mais sobre IoT, desenvolvimento de soluções e negócios da economia criativa? Estes são os conteúdos que você vai encontrar aqui, com a experiência dos Senger nestas áreas e um super alto astral. E claro, vai ver também dicas de surf, comida e viagens de motorhome. Aproveite com a gente!.</p>
+          </div>
+        <div class="video-container">
+            <iframe width="640" height="352" src="https://www.youtube.com/embed/t5eklk-IDKc" frameborder="0" allowfullscreen></iframe>
+            </div>
       </div>
     </div>
   </div>
@@ -472,6 +475,47 @@
           </div>
           <div id="ct-insta-img">
             <img id="insta-foto" />
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-blog" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="top-modal">
+              <div class="blog-content">
+
+                  <div class="container">
+                      <div class="row blog-title-level">
+                          <div class="col-md-6 col-sm-12 col-xs-12 blog-title">
+                              Seja bem-vindo ao blog da Tech Trip
+                          </div>
+                          <div class="col-md-6 col-sm-12 col-xs-12 blog-date">
+                              13 de dezembro 2016
+                          </div>
+                      </div>
+                      <div class="row blog-author">
+                        Equipe Tech Trip
+                    </div>
+                    <div class="row blog-text">
+                        <p>Quem não gostaria de aprender viajando? E se você pudesse fazer isso sem sair de casa e o tema fosse o que há de mais moderno em tecnologia?</p>
+                        <p>Esta é a meta do Projeto Tech Trip, que pretende acompanhar e tornar acessível digitalmente em tempo real, toda a viagem da família Senger pelo Vale do Silício, na Califórnia.</p>
+                        <p>Após realizar pelo menos 20 viagens anteriores de Motorhome nesta região, Vinicius Senger, que além de motorista do Motorhome, é um “maker” aficionado por circuitos e solda, acredita que seja hora de desmistificar o Vale e a possibilidade de viajar para lá:</p>
+                        <p>“As pessoas acreditam que seja muito complicado fazer esse tour de Motorhome. Nós aprendemos muito sobre organização e melhores preços nas viagens anteriores e conhecemos muitas pessoas nas principais empresas do Vale. Pareceu que hora de documentar tudo isso em um projeto bacana e recheado de tecnologia” afirma Vinícius Senger.</p>
+                        <p>Neste espaço você vai encontrar em formato de texto os depoimentos sobre a viagem e o que passa pela cabeça dos nossos tripulantes. Acompanhe conteúdos semanalmente.</p>
+                    </div>
+                  </div>
+
+                  <div style="clear:both"></div>
+              </div>
           </div>
       </div>
     </div>
@@ -507,43 +551,35 @@
         
         <script type="text/javascript">
 
-            var videoManager = {
-                getInfo: function(data){
-                    return {
-                        link: data.snippet.resourceId.videoId
-                        , thumbnails: data.snippet.thumbnails.default.url
-                        , description : data.snippet.title
-                    }
-                },
-                createBox: function(info){
-                    var templatebox = '<a href="[link]"><div class="video-item"><img width="98%" src="[srcImg]"></div><div class="box-multline-doted video-title">[description]</div></a>';
-                    var videoLink = "https://www.youtube.com/watch?v=" + info.link;
-                    templatebox = templatebox.replace('[link]', videoLink);
-                    templatebox = templatebox.replace('[srcImg]', info.thumbnails);
-                    templatebox = templatebox.replace('[description]', info.description);
+            // var videoManager = {
+            //     getInfo: function(data){
+            //         return {
+            //             link: data.snippet.resourceId.videoId
+            //             , thumbnails: data.snippet.thumbnails.default.url
+            //             , description : data.snippet.title
+            //         }
+            //     },
+            //     createBox: function(info){
+            //         var templatebox = '<a href="[link]" target="_blank"><div class="video-item"><img width="98%" src="[srcImg]"></div><div class="box-multline-doted video-title">[description]</div></a>';
+            //         var videoLink = "https://www.youtube.com/watch?v=" + info.link;
+            //         templatebox = templatebox.replace('[link]', videoLink);
+            //         templatebox = templatebox.replace('[srcImg]', info.thumbnails);
+            //         templatebox = templatebox.replace('[description]', info.description);
 
-                    return templatebox;
-                }
-            }
+            //         return templatebox;
+            //     }
+            // }
 
-            $.getJSON('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLGnT8xGNnv3f728Li3oLISyXqp7Jzs6u_&key=AIzaSyArZ8VfK84ZHCbwi5Phvjt7Hs5CzFU7WPQ&maxResults=15', function(data) {
-                console.log(data);
-                    debugger;
-                var size = data.items.length;
-                var videos = '';
-                 for(var i=0; i<size; i++) {
-                    videos += videoManager.createBox(videoManager.getInfo(data.items[i])); 
-                }
+            // $.getJSON('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLGnT8xGNnv3f728Li3oLISyXqp7Jzs6u_&key=AIzaSyArZ8VfK84ZHCbwi5Phvjt7Hs5CzFU7WPQ&maxResults=15', function(data) {
+            //     console.log(data);
+            //     var size = data.items.length;
+            //     var videos = '';
+            //      for(var i=0; i<size; i++) {
+            //         videos += videoManager.createBox(videoManager.getInfo(data.items[i])); 
+            //     }
                 
-                $('.video-maker .videos').append(videos);
-
-                // console.log(videoManager.getInfo(data.items[0]));
-                
-                // for(var i=0; i<data.data.items.length; i++) {
-                //     console.log(data.data.items[i].title); // title
-                //     console.log(data.data.items[i].description); // description
-                // }
-            });
+            //     $('.video-maker .videos').append(videos);
+            // });
 
 
             // MODELO:
@@ -562,12 +598,12 @@
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            // e.src='//www.google-analytics.com/analytics.js';
+            // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            // ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
 

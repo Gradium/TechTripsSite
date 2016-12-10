@@ -1,8 +1,40 @@
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, 
+.video-container object, 
+.video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.video-header{
+    margin-top: 50px;
+}
+
 .modal-title-video{
     text-align: justify;
     text-indent: 50px;
     padding-right: 30px;
-    height: 140px;
+    min-height: 140px;
 }
 
 #modal-videos .modal-body h4{
@@ -29,4 +61,11 @@
     font-size: 0.8em;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+
+@media screen and (max-width: 992px) {
+    .video-container {
+        margin-top: 25px;
+    }
 }
