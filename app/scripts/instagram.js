@@ -1,15 +1,15 @@
 var userFeed = new Instafeed({
 get: 'user',
-userId: '503185979',
-clientId: 'ed314ad3e5a649d9b32b82427566f8cc',
-accessToken: '503185979.ed314ad.fd92b89f2f7145c8aa6926664ccd98b9',
+userId: '4015121560',
+clientId: '131e461788214117b2738c081c22d183',
+accessToken: '4015121560.131e461.8211de84f7104130b9ca6fc338ea412a',
 template: '<div class="item">'
 + '<a href="javascript:void(0)" data-img="{{model.images.standard_resolution.url}}" data-username="{{model.caption.from.username}}" data-userphoto="{{model.caption.from.profile_picture}}" data-caption="{{model.caption.text}}" data-toggle="modal" data-target=".insta-modal-lg" id="{{id}}">'
 +'<img src="{{image}}">'
 + '</a>'
 +'</div>' ,
-sortBy: 'random',
-limit: 30,
+sortBy: 'most-recent',
+limit: 8,
 links: false,
 });
 userFeed.run();
