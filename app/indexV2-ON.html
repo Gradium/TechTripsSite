@@ -47,6 +47,18 @@
                         <div class="col-sm-8"></div>
                         <div class="col-sm-4">
                             <div class="row">
+                                <!--<div class="col-md-6 text-right">
+                                    <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                                        <div class="mdl-textfield__expandable-holder">
+                                            <input class="mdl-textfield__input" type="text" id="search">
+                                        </div>
+                                        <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                                            <i class="mdi mdi-24px mdi-light mdi-magnify"></i>
+                                        </label>
+                                    </div>
+                                    </form>
+                                </div>-->
                                 <ul class="nav-mnu nav-social">
                                     <li class="social">
                                         <a href="https://www.instagram.com/viniciusenger/" target="_blank" class="btn bg-mnu-btn-top" aria-label="Instagram">
@@ -607,14 +619,64 @@
         <script src="scripts/email.js"></script> 
         <script src="scripts/menu-mobile.js"></script> 
         <!-- endbuild -->
- 
+        
+        <script type="text/javascript">
+
+            
+
+            // var videoManager = {
+            //     getInfo: function(data){
+            //         return {
+            //             link: data.snippet.resourceId.videoId
+            //             , thumbnails: data.snippet.thumbnails.default.url
+            //             , description : data.snippet.title
+            //         }
+            //     },
+            //     createBox: function(info){
+            //         var templatebox = '<a href="[link]" target="_blank"><div class="video-item"><img width="98%" src="[srcImg]"></div><div class="box-multline-doted video-title">[description]</div></a>';
+            //         var videoLink = "https://www.youtube.com/watch?v=" + info.link;
+            //         templatebox = templatebox.replace('[link]', videoLink);
+            //         templatebox = templatebox.replace('[srcImg]', info.thumbnails);
+            //         templatebox = templatebox.replace('[description]', info.description);
+
+            //         return templatebox;
+            //     }
+            // }
+
+            // $.getJSON('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLGnT8xGNnv3f728Li3oLISyXqp7Jzs6u_&key=AIzaSyArZ8VfK84ZHCbwi5Phvjt7Hs5CzFU7WPQ&maxResults=15', function(data) {
+            //     console.log(data);
+            //     var size = data.items.length;
+            //     var videos = '';
+            //      for(var i=0; i<size; i++) {
+            //         videos += videoManager.createBox(videoManager.getInfo(data.items[i])); 
+            //     }
+                
+            //     $('.video-maker .videos').append(videos);
+            // });
+
+
+            // MODELO:
+            // <a href="#">
+            //     <div class="video-item">
+            //         <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
+            //     </div>
+            //     <div class="box-multline-doted video-title">
+            //         Texto sobre o video explicando alguma bagaça com um texto um pouco maior pra ver ocupar duas linhas do baralho
+            //     </div>
+            // </a>
+
+// youtube 
+// https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLGnT8xGNnv3f728Li3oLISyXqp7Jzs6u_&key=AIzaSyArZ8VfK84ZHCbwi5Phvjt7Hs5CzFU7WPQ&maxResults=20
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-88920135-1');ga('send','pageview');
+            ga('create','88920135-1');ga('send','pageview');
         </script>
 
 

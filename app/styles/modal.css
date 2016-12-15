@@ -1,11 +1,12 @@
-@media screen and (max-width: 992px) {
-    .modal .modal-content{ 
-        margin-top: 50px;
-    }
-}
 
 .top-modal{
     margin: 0px 5%;
     margin-top: 40px;
     position: relative;
+}
+
+@media screen and (max-width: 992px) {
+    .modal .modal-content{ 
+        margin-top: 50px;
+    }
 }

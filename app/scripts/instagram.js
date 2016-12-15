@@ -9,8 +9,9 @@ template: '<div class="item">'
 + '</a>'
 +'</div>' ,
 sortBy: 'most-recent',
-limit: 8,
+limit: 10,
 links: false,
+resolution : 'low_resolution'
 });
 userFeed.run();
 

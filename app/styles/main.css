@@ -208,11 +208,11 @@ footer{
     padding: 2px;
 }
 
-@media screen and (max-width: 992px) {
+/*@media screen and (max-width: 992px) {
     .footer-patrocinador{
         padding: 0 10%;
     }
-}
+}*/
 
 .carousel-sec{
     margin-top: -20px;
@@ -222,10 +222,6 @@ footer{
   max-width: 100%;
   height: auto;
 }
-
-
-
-
 
 #containerImg {
     max-width: 1000px;
@@ -238,6 +234,80 @@ footer{
     display: block;
     width: 100%;
 }
+
+.emailtech {
+    width: 60%;
+    margin: 0 auto;
+    display:block;
+}
+
+.form-control, .emailtech {
+    width: 100% !important;
+    display: block;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25 !important;
+    color: #55595c;
+    background-color: #fff !important;
+    background-image: none !important;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box !important; 
+    border: 3px solid #502246 !important;
+    border-radius: .25rem !important;
+}
+
+#trip button{
+    margin-top: 5px;
+}
+.emailgroup{
+    width: 80%;
+}
+
+.footer-form p:last-of-type{
+    padding-bottom: 20px;
+}
+
+.alertbox,
+.okbox,
+.failbox {
+    padding-top: 50px;
+    display: none;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+/* Portrait */
+@media screen and (orientation: portrait) {
+    .alertbox,
+    .okbox,
+    .failbox {
+        padding-left:5px;
+        padding-right:px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .emailgroup{
+        width: 100%;
+    }
+
+    #trip button{
+        float: right;
+    }
+
+    .footer-patrocinios{
+        padding-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
