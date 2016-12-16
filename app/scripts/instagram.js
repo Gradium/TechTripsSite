@@ -9,7 +9,7 @@ template: '<div class="item">'
 + '</a>'
 +'</div>' ,
 sortBy: 'most-recent',
-limit: 10,
+limit: 15,
 links: false,
 resolution : 'low_resolution'
 });
@@ -25,4 +25,13 @@ $('#insta-foto').attr('src', src);
 $('#profileImage').attr('style', "background-image: url('" + profileImage +"')");
 $('#caption').html(caption);
 $('#profile').html('@' + profile);
-})
+});
+function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+};
+$(document).ready(function() {
+    $('.albuns').click(function(){
+        scrollToAnchor('insta-techtrips');
+    });
+});
