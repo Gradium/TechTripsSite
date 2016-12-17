@@ -190,6 +190,21 @@ footer{
     font-weight: bold;
 }
 
+@media screen and (max-width: 992px) {
+    .footer-menu {
+        background: #2b2a2a;
+        padding-top: 8px;
+        margin-bottom: 15px;
+    }
+    .footer-menu div{
+        text-align: center;
+    }
+    .footer-menu div a,
+    .footer-menu div a:hover{
+        line-height: 20px;
+    }
+}
+
 .footer-menu{
     min-height: 35px;
 }

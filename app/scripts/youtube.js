@@ -2,7 +2,7 @@
     getInfo: function(data){
         return {
             link: data.snippet.resourceId.videoId
-            , thumbnails: data.snippet.thumbnails.default.url
+            , thumbnails: data.snippet.thumbnails.medium.url
             , description : data.snippet.title
         }
     },
@@ -28,6 +28,7 @@
         var url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=[listId]&key=AIzaSyArZ8VfK84ZHCbwi5Phvjt7Hs5CzFU7WPQ&maxResults=15';
         url = url.replace('[listId]', listId);
         $.getJSON(url, function(data) {
+            console.log(data);
             callback(data.items, containerId);
         });
     },

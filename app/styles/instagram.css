@@ -1,6 +1,7 @@
 #modal-instagram .modal-content{
     overflow: hidden;
     overflow-y: auto;
+    height: 970px;
 }
 
 #instafeed .item{
@@ -22,8 +23,8 @@
 
 #profileImage {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   margin: 1em auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,7 +38,7 @@
 
 .ct-insta-profile-id{
     padding-left: 5px;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .ct-insta-profile-id div{
@@ -71,5 +72,9 @@
     #profileImage {
         width: 100px;
         height: 100px;
+    }
+
+    #modal-instagram .modal-content{
+        height: auto;
     }
 }

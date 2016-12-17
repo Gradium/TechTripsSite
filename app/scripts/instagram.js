@@ -14,23 +14,26 @@ links: false,
 resolution : 'low_resolution'
 });
 userFeed.run();
-
-$('.insta-modal-lg').on('shown.bs.modal', function (e) {
-var el = e.relatedTarget;
-var profileImage = $(el).attr('data-userphoto'); 
-var src = $(el).attr('data-img');
-var caption = $(el).attr('data-caption');
-var profile = $(el).attr('data-username');
-$('#insta-foto').attr('src', src);
-$('#profileImage').attr('style', "background-image: url('" + profileImage +"')");
-$('#caption').html(caption);
-$('#profile').html('@' + profile);
-});
 function scrollToAnchor(aid){
     var aTag = $("a[name='"+ aid +"']");
     $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 };
+
 $(document).ready(function() {
+    $('.insta-modal-lg').on('shown.bs.modal', function (e) {
+        var el = e.relatedTarget;
+        var profileImage = $(el).attr('data-userphoto'); 
+        var src = $(el).attr('data-img');
+        var caption = $(el).attr('data-caption');
+        var profile = $(el).attr('data-username');
+        $('#insta-foto').attr('src', src);
+        $('#profileImage').attr('style', "background-image: url('" + profileImage +"')");
+        $('#caption').html(caption);
+        $('#profile').html('@' + profile);
+    });
+    $('#modal-instagram').on('hidden.bs.modal', function () {
+        $('#insta-foto').attr('src', '#');
+    });
     $('.albuns').click(function(){
         scrollToAnchor('insta-techtrips');
     });
