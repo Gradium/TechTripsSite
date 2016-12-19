@@ -40,7 +40,7 @@
     <body>
         <div class="bg-all"></div>
         <!--Menu desk-->
-        <nav class="navbar-fixed-top navbar-light hidden-md-down">
+        <nav id="menu-desk" class="navbar-fixed-top navbar-light hidden-md-down">
             <div class="mnu shareandsearchbar">
                 <div class="container">
                     <div class="row">
@@ -124,13 +124,13 @@
                     <img src="images/logo-techtrip.png" class="logo-home-mobile" />
                 </a>
                 <a href="#" target="_blank" class="navbar-brand mnu-float-mobile" aria-label="Instagram">
-                    <i class="mdi mdi-24px mdi-light mdi-instagram" aria-hidden="true"></i>
+                    <i class="mdi mdi-24px mdi-light mdi-instagram mdi-menu-size" aria-hidden="true"></i>
                 </a>
                 <a href="https://www.facebook.com/techtripsenger/" target="_blank" class="navbar-brand mnu-float-mobile" aria-label="Facebook">
-                    <i class="mdi mdi-light mdi-24px mdi-facebook" aria-hidden="true"></i>
+                    <i class="mdi mdi-light mdi-24px mdi-facebook mdi-menu-size" aria-hidden="true"></i>
                 </a>
                 <a href="#" target="_blank" class="navbar-brand mnu-float-mobile" aria-label="Twitter">
-                    <i class="mdi mdi-light mdi-24px mdi-twitter" aria-hidden="true"></i>
+                    <i class="mdi mdi-light mdi-24px mdi-twitter mdi-menu-size" aria-hidden="true"></i>
                 </a>
                 <div style="clear:both"></div>
                 <div class="collapse navbar-toggleable-md" id="menu-mobile">
@@ -181,6 +181,7 @@
                     </div>
                 </div>
             </div>
+            <div id="fbLive"></div>
             <!--<a href="#" class="link-live">-->
                 <!--<div class="live-notificacao live">-->
                 <div class="live-notificacao notLive">
@@ -357,7 +358,7 @@
       </div>
       <div class="modal-body">
           <div class="content-naEstrada top-modal">
-              <div class="box-img-naEstrada naEstrada-img1">
+              <div class="box-img-naEstrada naEstrada-img1 modal-box-title">
               </div>
               <div class="txt-naEstrada">
                   <h2>Embarque nessa Trip com a Família Senger</h2>
@@ -366,7 +367,7 @@
                   <p>Todos os conteúdos estarão organizados no site para que você possa encontrar tudo sobre a nossa empreitada e as pessoas cadastradas serão notificadas sempre que acontecer uma live ou  novos conteúdos forem adicionados.</p>
               </div>
 
-              <div class="box-img-naEstrada naEstrada-img2">
+              <div class="box-img-naEstrada naEstrada-img2 modal-box-title">
               </div>
               <div class="txt-naEstrada">
                   <h2>Lugares incríveis por onde a Tech Trip vai passar</h2>
@@ -383,7 +384,7 @@
                   </ul>
               </div>
 
-              <div class="box-img-naEstrada naEstrada-img3">
+              <div class="box-img-naEstrada naEstrada-img3 modal-box-title">
               </div>
               <div class="txt-naEstrada">
                   <h2>Conteúdos que serão desenvolvidos na Tech Trip</h2>
@@ -415,22 +416,22 @@
           </div>
           <div class="container">
               <div class="row"> 
-                  <div class="col-md-3 video-maker">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 video-maker">
                       <h4>Maker</h4>
                       <div class="videos">
                       </div>
                   </div>
-                  <div class="col-md-3 video-motorhome">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 video-motorhome">
                       <h4>Motorhome</h4>
                       <div class="videos">
                       </div>
                   </div>
-                  <div class="col-md-3 video-educacao">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 video-educacao">
                       <h4>Educação</h4>
                       <div class="videos">
                       </div>
                   </div>
-                  <div class="col-md-3 video-dicas">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 video-dicas">
                       <h4>Dicas e Curiosidades</h4>
                       <div class="videos">
                       </div>
@@ -471,7 +472,7 @@
       </div>
       <div class="modal-body">
           <div class="content-naEstrada top-modal">
-              <div class="box-img-naEstrada demo-img1">
+              <div class="box-img-naEstrada demo-img1 modal-box-title">
               </div>
               <div class="txt-naEstrada" style="padding-top:20px;">
                   <p>A Tech Trip não é só pra assistir, é pra por a mão na massa também. Ficou interessado em algum dos projetos realizados na viagem? Dê uma olhada nos links para ver o que você pode começar a fazer hoje mesmo!</p>
@@ -573,20 +574,17 @@
 
         
         <!-- build:js scripts/app.js -->
-        <script src="scripts/top-area.js"></script>
         <script src="scripts/app.js"></script>
+        <script src="scripts/top-area.js"></script>
+        <script src="scripts/modal.js"></script>
         <script src="scripts/images.js"></script>
         <script src="scripts/instagram.js"></script>
-        <script src="scripts/temp.js"></script>
         <script src="scripts/email.js"></script> 
         <script src="scripts/menu-mobile.js"></script> 
         <script src="scripts/youtube.js"></script> 
-        <script src="scripts/facebookLive.js"></script> 
+        <script src="scripts/fblive.js"></script> 
         <!-- endbuild -->
 
-<script> 
-
-</script>
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

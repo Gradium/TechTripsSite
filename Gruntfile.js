@@ -173,6 +173,7 @@ module.exports = function (grunt) {
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{gif,jpeg,jpg,png,webp}',
                         '<%= yeoman.dist %>/styles/fonts/{,*/}*.*'
+                        ,//'<%= yeoman.dist %>/styles/images/{,*/}*.{gif,jpeg,jpg,png,webp}'
                     ]
                 }
             }
@@ -205,7 +206,14 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.{gif,jpeg,jpg,png}',
                     dest: '<%= yeoman.dist %>/images'
-                }]
+                }
+                ,{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles/images',
+                    src: '{,*/}*.{gif,jpeg,jpg,png}',
+                    dest: '<%= yeoman.dist %>/styles/images'
+                }
+                ]
             }
         },
         svgmin: {
@@ -215,7 +223,14 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.svg',
                     dest: '<%= yeoman.dist %>/images'
-                }]
+                }
+                ,{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles/images',
+                    src: '{,*/}*.svg',
+                    dest: '<%= yeoman.dist %>/styles/images'
+                }
+                ]
             }
         },
         htmlmin: {
@@ -242,16 +257,16 @@ module.exports = function (grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-        // cssmin: {
-        //     dist: {
-        //         files: {
-        //             '<%= yeoman.dist %>/styles/main.css': [
-        //                 '.tmp/styles/{,*/}*.css',
-        //                 '<%= yeoman.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
+        //cssmin: {
+        // dist: {
+        //     files: {
+        //         '<%= yeoman.dist %>/styles/main.css': [
+        //             '.tmp/styles/{,*/}*.css',
+        //             '<%= yeoman.app %>/styles/{,*/}*.css'
+        //         ]
         //     }
-        // },
+        // }
+        //},
         // uglify: {
         //     dist: {
         //         files: {
@@ -278,6 +293,7 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.webp',
                         'styles/fonts/{,*/}*.*',
+                        'styles/images/{,*/}*.*',
                         'fonts/{,*/}*.*'
                     ]
                 }]

@@ -9,4 +9,10 @@
     .modal .modal-content{ 
         margin-top: 50px;
     }
+
+    .modal-box-title {
+        background-size: 150%;
+        min-height: auto;
+        height: 60px;
+    }
 }

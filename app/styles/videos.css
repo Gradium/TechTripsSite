@@ -61,7 +61,7 @@
     font-size: 0.8em;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-    color:#ff5722; 
+    color:#725e50; 
     font-weight: 600;
     line-height: 18px;
 }
@@ -70,5 +70,28 @@
 @media screen and (max-width: 992px) {
     .video-container {
         margin-top: 25px;
+    }
+    .modal-title-video{
+        padding-right: 0px;
+        font-size: 0.8em;
+        line-height: 18px;
+        font-weight: 600;
+    }
+
+    #modal-videos .modal-content .modal-body {
+        padding: 20px 14px 24px;
+    }
+
+    #modal-videos .container{
+        margin-top: 20px;
+    }
+
+    .video-maker,
+    .video-motorhome,
+    .video-educacao,
+    .video-dicas
+    {
+        padding-left: 1px;
+        padding-right: 1px;
     }
 }

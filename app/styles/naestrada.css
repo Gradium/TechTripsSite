@@ -12,15 +12,25 @@
 }
 
 .naEstrada-img1{
-    background:url('../images/embarquenessatrip.png') no-repeat left center;
+    background:url('images/embarquenessatrip.png') no-repeat left center;
 }
 
 .naEstrada-img2{
-    background:url('../images/lugaresincriveis.png') no-repeat left center;
+    background:url('images/lugaresincriveis.png') no-repeat left center;
 }
 
 .naEstrada-img3{
-    background:url('../images/conteudodatrip.png') no-repeat left center;
+    background:url('images/conteudodatrip.png') no-repeat left center;
+}
+
+@media screen and (max-width: 992px) {
+    .naEstrada-img1,
+    .naEstrada-img2,
+    .naEstrada-img3{
+        background-size: 150%;
+        min-height: auto;
+        height: 60px;
+    }
 }
 
 .txt-naEstrada{
