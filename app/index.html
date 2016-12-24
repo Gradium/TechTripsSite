@@ -35,6 +35,13 @@
 
         <link rel="stylesheet" href="styles/modal.css">
         <!-- endbuild -->
+        <script>
+            function autoResize(i) {
+                if($( window ).width() > 992){
+                    $(i).css('height', 300);
+                }
+            }
+        </script>
 
     </head>
     <body>
@@ -137,6 +144,9 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target="#modal-naEstrada">A Viagem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target="#modal-live">Ao vivo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target="#modal-videos">Videos</a>
@@ -348,7 +358,7 @@
         </footer>
 
 
-<div id="modal-naEstrada" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+<div id="modal-naEstrada" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
@@ -513,7 +523,7 @@
   </div>
 </div>
 
-<div id="modal-blog" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+<div id="modal-blog" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -554,7 +564,7 @@
   </div>
 </div>
 
-<div id="modal-live" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+<div id="modal-live" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -574,10 +584,12 @@
                       </div>
                     </div>
                     <div class="row live-content">
-                        <div class="live-to-review">
-
+                        <div class="live-to-review col-md-6 col-sm-12 col-xs-12">
+                            <iframe onload="autoResize(this)" height="100%" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fvsenger%2Fvideos%2F10155069498300827%2F&show_text=true&appId=472942732746686" width="100%" style="border:none;overflow:hidden;height:auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                         </div>
-                        
+                        <div class="live-to-review col-md-6 col-sm-12 col-xs-12">
+                            <iframe onload="autoResize(this)" height="100%" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fvsenger%2Fvideos%2F10155059541585827%2F&show_text=true&appId=472942732746686" width="100%" height="365" style="border:none;overflow:hidden;height:auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                        </div>
                     </div>
                   </div>
 
@@ -633,8 +645,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-88920135-1');ga('send','pageview');
         </script>
-
-
         
     </body>
 </html>
