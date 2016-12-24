@@ -1,4 +1,4 @@
-// Generated on 2016-11-02 using generator-react 0.0.2
+// Generated on 2016-11-27 using generator-react 0.0.2
 'use strict';
 
 // # Globbing
@@ -140,20 +140,6 @@ module.exports = function (grunt) {
         },
 
         
-        requirejs: {
-            compile: {
-                options: {
-                    baseUrl: '<%= yeoman.app %>/scripts',
-                    wrap: true,
-                    name: '../bower_components/almond/almond',
-                    preserveLicenseComments: false,
-                    optimize: 'uglify', // 'none',
-                    mainConfigFile: '<%= yeoman.app %>/scripts/main.js',
-                    include: ['main'],
-                    out: '<%= yeoman.dist %>/scripts/app.min.js'
-                }
-            }
-        },
 
         // Add vendor prefixed styles
         autoprefixer: {
@@ -187,6 +173,7 @@ module.exports = function (grunt) {
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{gif,jpeg,jpg,png,webp}',
                         '<%= yeoman.dist %>/styles/fonts/{,*/}*.*'
+                        ,//'<%= yeoman.dist %>/styles/images/{,*/}*.{gif,jpeg,jpg,png,webp}'
                     ]
                 }
             }
@@ -219,7 +206,14 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.{gif,jpeg,jpg,png}',
                     dest: '<%= yeoman.dist %>/images'
-                }]
+                }
+                ,{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles/images',
+                    src: '{,*/}*.{gif,jpeg,jpg,png}',
+                    dest: '<%= yeoman.dist %>/styles/images'
+                }
+                ]
             }
         },
         svgmin: {
@@ -229,7 +223,14 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.svg',
                     dest: '<%= yeoman.dist %>/images'
-                }]
+                }
+                ,{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles/images',
+                    src: '{,*/}*.svg',
+                    dest: '<%= yeoman.dist %>/styles/images'
+                }
+                ]
             }
         },
         htmlmin: {
@@ -256,16 +257,16 @@ module.exports = function (grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-        // cssmin: {
-        //     dist: {
-        //         files: {
-        //             '<%= yeoman.dist %>/styles/main.css': [
-        //                 '.tmp/styles/{,*/}*.css',
-        //                 '<%= yeoman.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
+        //cssmin: {
+        // dist: {
+        //     files: {
+        //         '<%= yeoman.dist %>/styles/main.css': [
+        //             '.tmp/styles/{,*/}*.css',
+        //             '<%= yeoman.app %>/styles/{,*/}*.css'
+        //         ]
         //     }
-        // },
+        // }
+        //},
         // uglify: {
         //     dist: {
         //         files: {
@@ -291,7 +292,9 @@ module.exports = function (grunt) {
                         '*.{ico,png,txt}',
                         '.htaccess',
                         'images/{,*/}*.webp',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/fonts/{,*/}*.*',
+                        'styles/images/{,*/}*.*',
+                        'fonts/{,*/}*.*'
                     ]
                 }]
             },
@@ -301,22 +304,17 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            },
+            fonts: {
+                expand: true,
+                dot: true,
+                cwd: '<%= yeoman.app %>/bower_components/mdi/fonts',
+                dest: '.tmp/fonts',
+                src: '{,*/}*.css'
             }
         },
 
         
-        // Generates a custom Modernizr build that includes only the tests you
-        // reference in your app
-        modernizr: {
-            devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
-            outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
-            files: [
-                '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                '<%= yeoman.dist %>/styles/{,*/}*.css',
-                '!<%= yeoman.dist %>/scripts/vendor/*'
-            ],
-            uglify: true
-        },
 
         // Run some tasks in parallel to speed up build process
         concurrent: {
@@ -333,14 +331,6 @@ module.exports = function (grunt) {
                 'svgmin',
                 'htmlmin'
             ]
-        },
-        bower: {
-            options: {
-                exclude: ['modernizr']
-            },
-            all: {
-                rjsConfig: '<%= yeoman.app %>/scripts/main.js'
-            }
         }
     });
 
@@ -378,8 +368,7 @@ module.exports = function (grunt) {
         'concat',
         'cssmin',
         'uglify',
-        'requirejs',
-        'modernizr',
+        'copy:fonts',
         'copy:dist',
         'rev',
         'usemin'

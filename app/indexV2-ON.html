@@ -35,25 +35,30 @@
 
         <link rel="stylesheet" href="styles/modal.css">
         <!-- endbuild -->
-        <script>
-            function autoResize(i) {
-                if($( window ).width() > 992){
-                    $(i).css('height', 300);
-                }
-            }
-        </script>
 
     </head>
     <body>
         <div class="bg-all"></div>
         <!--Menu desk-->
-        <nav id="menu-desk" class="navbar-fixed-top navbar-light hidden-md-down">
+        <nav class="navbar-fixed-top navbar-light hidden-md-down">
             <div class="mnu shareandsearchbar">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8"></div>
                         <div class="col-sm-4">
                             <div class="row">
+                                <!--<div class="col-md-6 text-right">
+                                    <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                                        <div class="mdl-textfield__expandable-holder">
+                                            <input class="mdl-textfield__input" type="text" id="search">
+                                        </div>
+                                        <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                                            <i class="mdi mdi-24px mdi-light mdi-magnify"></i>
+                                        </label>
+                                    </div>
+                                    </form>
+                                </div>-->
                                 <ul class="nav-mnu nav-social">
                                     <li class="social">
                                         <a href="https://www.instagram.com/viniciusenger/" target="_blank" class="btn bg-mnu-btn-top" aria-label="Instagram">
@@ -93,8 +98,8 @@
                                             Demos
                                         </a>
                                     </li>
-                                    <li class="mnu-principal-item">
-                                        <a class="albuns" href="javascript:void(0);">
+                                    <li class="mnu-principal-item" style="display:none;">
+                                        <a href="#">
                                             Albuns
                                         </a>
                                     </li>
@@ -103,8 +108,8 @@
                                             Videos
                                         </a>
                                     </li>
-                                    <li class="mnu-principal-item">
-                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-live">
+                                    <li style="display:none;" class="mnu-principal-item">
+                                        <a href="#">
                                             Ao Vivo
                                         </a>
                                     </li>
@@ -131,13 +136,13 @@
                     <img src="images/logo-techtrip.png" class="logo-home-mobile" />
                 </a>
                 <a href="#" target="_blank" class="navbar-brand mnu-float-mobile" aria-label="Instagram">
-                    <i class="mdi mdi-24px mdi-light mdi-instagram mdi-menu-size" aria-hidden="true"></i>
+                    <i class="mdi mdi-24px mdi-light mdi-instagram" aria-hidden="true"></i>
                 </a>
                 <a href="https://www.facebook.com/techtripsenger/" target="_blank" class="navbar-brand mnu-float-mobile" aria-label="Facebook">
-                    <i class="mdi mdi-light mdi-24px mdi-facebook mdi-menu-size" aria-hidden="true"></i>
+                    <i class="mdi mdi-light mdi-24px mdi-facebook" aria-hidden="true"></i>
                 </a>
                 <a href="#" target="_blank" class="navbar-brand mnu-float-mobile" aria-label="Twitter">
-                    <i class="mdi mdi-light mdi-24px mdi-twitter mdi-menu-size" aria-hidden="true"></i>
+                    <i class="mdi mdi-light mdi-24px mdi-twitter" aria-hidden="true"></i>
                 </a>
                 <div style="clear:both"></div>
                 <div class="collapse navbar-toggleable-md" id="menu-mobile">
@@ -146,14 +151,11 @@
                             <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target="#modal-naEstrada">A Viagem</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target="#modal-live">Ao vivo</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target="#modal-videos">Videos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link albuns" href="javascript:void(0);">Albuns</a>
-                        </li>
+                        <!--<li class="nav-item" style="display:none;">
+                            <a class="nav-link" href="#">Albuns</a>
+                        </li>-->
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target="#modal-demo">Demos</a>
                         </li>
@@ -162,24 +164,20 @@
             </div>
         </nav>
         <section class="patrocinio">
-            <div class="container ct-patrocinio">
+            <div class="container">
                 <div class="row logo-center-desk hidden-xs-down">
                     <img src="images/techtrip.png" alt="">
                 </div>
-                <div class="text-techtrip hidden-md-down">
-                    <p>A Tech Trip é uma viagem de 40 dias de Motorhome, realizada pela Família Senger no Vale do Silício que se inicia no dia 13 de dezembro de 2016 e se encerra no dia 25 de janeiro de 2017. Através deste web site, você poderá acompanhar toda viagem através de vídeos, fotos, transmissões ao vivo e relatos da experiência.
-                    </p>
-                </div>
                 <div class="row patrocinadores">
-                    
+                    <div class="text-techtrip hidden-md-down">
+                        <p>A Tech Trip é uma viagem de 40 dias de Motorhome, realizada pela Família Senger no Vale do Silício que se inicia no dia 13 de dezembro de 2016 e se encerra no dia 25 de janeiro de 2017. Através deste web site, você poderá acompanhar toda viagem através de vídeos, fotos, transmissões ao vivo e relatos da experiência.
+                        </p>
+                    </div>
                     <div class="col-lg-2 col-md-4 hidden-md-down patrocinio-item"> <!--col-sm-6 col-xs-6 -->
                         <!--<img src="images/patrocinador-default.png" alt="">-->
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 patrocinio-item">
-                        <img src="images/intelW.png" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 patrocinio-item">
-                        <img src="images/braincare.png" alt="">
+                        <img src="images/intel.png" alt="">
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 patrocinio-item">
                         <img src="images/deal.png" alt="">
@@ -187,18 +185,20 @@
                     <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 patrocinio-item">
                         <img src="images/danielwildt.png" alt="">
                     </div>
-                    <div class="col-lg-2 col-md-4 hidden-md-down patrocinio-item">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 patrocinio-item">
+                        <!--<img src="images/uolhost.png" alt="">-->
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 patrocinio-item">
                         <!--<img src="images/patrocinador-default.png" alt="">-->
                     </div>
                 </div>
             </div>
-            <div id="fbLive"></div>
             <!--<a href="#" class="link-live">-->
                 <!--<div class="live-notificacao live">-->
-                <!--<div class="live-notificacao notLive">
+                <div class="live-notificacao notLive">
                     <p class="on">Estamos ao vivo! Clique e acompanhe nossa transmissão!</p>
                     <p class="notOn" >No momento não estamos ao vivo</p>
-                </div>-->
+                </div>
             <!--</a>-->
         </section>
         <div style="clear:both"></div>
@@ -264,10 +264,9 @@
         </section>
 
         <section class="mapa">
-            <img src="http://techtrips.com.br/content/mapa/mapa.png" />
+            <img src="images/mapa.png" />
         </section>
 
-        <a name="insta-techtrips" class="anchor"></a>
         <section class="carousel-sec">
             <div class="container">
                 <div class="row">
@@ -287,16 +286,16 @@
                 <div class="row">
                     <div class="col-md-5 col-sm-12 col-xs-12 ">
                         <div class="footer-menu">
-                            <div class="col-md-3 col-sm-3 col-xs-3">
+                            <div class="col-md-3 col-sm-4 col-xs-4">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-naEstrada">A Viagem</a>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-3">
+                            <div class="col-md-3 col-sm-4 col-xs-4">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-videos">Vídeos</a>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                <a class="albuns" href="javascript:void(0);">Álbuns</a>
+                            <div class="col-md-3 col-sm-6 col-xs-6" style="display:none;">
+                                <a href="#">Álbuns</a>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-3">
+                            <div class="col-md-3 col-sm-4 col-xs-4">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-demo">Demos</a>
                             </div>
                         </div>
@@ -334,31 +333,34 @@
                         <img src="images/techtrip-white.png" alt="Logo do Techtrip">
                     </div>
                     <div class="col-md-5 col-sm-12 col-xs-12 footer-patrocinios">
-                        <div class="col-md-3 col-sm-3 col-xs-3 footer-patrocinador">
+                        <div class="col-md-4 col-sm-4 col-xs-4 footer-patrocinador">
                             <img src="images/intelW.png" alt="">
                         </div>
-                        <div class="col-md-3 col-sm-3 col-xs-3 footer-patrocinador">
-                            <img src="images/braincareW.png" alt="">
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xs-3 footer-patrocinador">
+                        <div class="col-md-4 col-sm-4 col-xs-4 footer-patrocinador">
                             <img src="images/dealW.png" alt="">
                         </div>
-                        <div class="col-md-3 col-sm-3 col-xs-3 footer-patrocinador">
+                        <div class="col-md-4 col-sm-4 col-xs-4 footer-patrocinador">
                             <img src="images/danielwildtW.png" alt="">
                         </div>
-                        <!--<div class="col-md-4 col-sm-6 col-xs-6 footer-patrocinador">
-                            <img src="#" alt="">
+                        <div class="col-md-4 col-sm-6 col-xs-6 footer-patrocinador">
+                            <!--<img src="images/uolhost.png" alt="">-->
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-6 footer-patrocinador">
-                            <img src="#g" alt="">
-                        </div>-->
+                            <!--<img src="images/patrocinador-default.png" alt="">-->
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 footer-patrocinador">
+                            <!--<img src="images/patrocinador-default.png" alt="">-->
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
 
+        <div id="instafeed"></div>
 
-<div id="modal-naEstrada" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+
+
+<div id="modal-naEstrada" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
@@ -369,7 +371,7 @@
       </div>
       <div class="modal-body">
           <div class="content-naEstrada top-modal">
-              <div class="box-img-naEstrada naEstrada-img1 modal-box-title">
+              <div class="box-img-naEstrada naEstrada-img1">
               </div>
               <div class="txt-naEstrada">
                   <h2>Embarque nessa Trip com a Família Senger</h2>
@@ -378,7 +380,7 @@
                   <p>Todos os conteúdos estarão organizados no site para que você possa encontrar tudo sobre a nossa empreitada e as pessoas cadastradas serão notificadas sempre que acontecer uma live ou  novos conteúdos forem adicionados.</p>
               </div>
 
-              <div class="box-img-naEstrada naEstrada-img2 modal-box-title">
+              <div class="box-img-naEstrada naEstrada-img2">
               </div>
               <div class="txt-naEstrada">
                   <h2>Lugares incríveis por onde a Tech Trip vai passar</h2>
@@ -395,7 +397,7 @@
                   </ul>
               </div>
 
-              <div class="box-img-naEstrada naEstrada-img3 modal-box-title">
+              <div class="box-img-naEstrada naEstrada-img3">
               </div>
               <div class="txt-naEstrada">
                   <h2>Conteúdos que serão desenvolvidos na Tech Trip</h2>
@@ -427,24 +429,48 @@
           </div>
           <div class="container">
               <div class="row"> 
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 video-maker">
+                  <div class="col-md-3 video-maker">
                       <h4>Maker</h4>
                       <div class="videos">
+                          <a href="https://www.youtube.com/watch?v=bJ2Mc-tTdpA" target="_blank">
+                            <div class="video-item">
+                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="A Tech Trip é uma viagem de 40 dias de Motorhome, realizada pela Família Senger no Vale do Silício que se inicia no dia 13 de dezembro de 2016 e se encerra no dia 25 de janeiro de 2017." src="https://i.ytimg.com/vi/bJ2Mc-tTdpA/hqdefault.jpg?custom=true&w=120&h=90&jpg444=true&jpgq=90&sp=68&sigh=BwNm6Flql5yMxH6CFSA6qYCaFpM">
+                            </div>
+                            <p class="video-title">A Tech Trip é uma viagem de 40 dias de Motorhome.</p>
+                          </a>
                       </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 video-motorhome">
+                  <div class="col-md-3 video-motorhome">
                       <h4>Motorhome</h4>
                       <div class="videos">
+                          <a href="https://www.youtube.com/watch?v=xrvTDxPODM8" target="_blank">
+                            <div class="video-item">
+                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="A Tech Trip é uma viagem de 40 dias de Motorhome, realizada pela Família Senger no Vale do Silício que se inicia no dia 13 de dezembro de 2016 e se encerra no dia 25 de janeiro de 2017. Através deste web site, você poderá acompanhar toda viagem através de vídeos, fotos, transmissões ao vivo e relatos da experiência." src="https://i.ytimg.com/vi/xrvTDxPODM8/hqdefault.jpg?custom=true&w=120&h=90&jpg444=true&jpgq=90&sp=68&sigh=ujEQ98Dw-k7vm59zMUoepximUrU">
+                            </div>
+                            <p class="video-title">A Tech Trip é uma viagem de 40 dias de Motorhome.</p>
+                          </a>
                       </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 video-educacao">
+                  <div class="col-md-3 video-educacao">
                       <h4>Educação</h4>
                       <div class="videos">
+                          <a href="https://www.youtube.com/watch?v=6VBRQDPfVTo" target="_blank">
+                            <div class="video-item">
+                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="A Tech Trip é uma viagem de 40 dias de Motorhome, realizada pela Família Senger no Vale do Silício que se inicia no dia 13 de dezembro de 2016 e se encerra no dia 25 de janeiro de 2017. Através deste web site, você poderá acompanhar toda viagem através de vídeos, fotos, transmissões ao vivo e relatos da experiência." src="https://i.ytimg.com/vi/6VBRQDPfVTo/hqdefault.jpg?custom=true&w=120&h=90&jpg444=true&jpgq=90&sp=68&sigh=lwr5ZSJlWQs2tLvvasyIhaPqrkI">
+                            </div>
+                            <p class="video-title">A Tech Trip é uma viagem de 40 dias de Motorhome.</p>
+                          </a>
                       </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 video-dicas">
+                  <div class="col-md-3 video-dicas">
                       <h4>Dicas e Curiosidades</h4>
                       <div class="videos">
+                          <a href="https://www.youtube.com/watch?v=17f8g4mfXrg" target="_blank">
+                            <div class="video-item">
+                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="A Tech Trip é uma viagem de 40 dias de Motorhome, realizada pela Família Senger no Vale do Silício que se inicia no dia 13 de dezembro de 2016 e se encerra no dia 25 de janeiro de 2017. Através deste web site, você poderá acompanhar toda viagem através de vídeos, fotos, transmissões ao vivo e relatos da experiência." src="https://i.ytimg.com/vi/17f8g4mfXrg/hqdefault.jpg?custom=true&w=120&h=90&jpg444=true&jpgq=90&sp=68&sigh=HZ6mHUwGt1wr3AZa5ovWzMPqgDw">
+                            </div>
+                            <p class="video-title">A Tech Trip é uma viagem de 40 dias de Motorhome.</p>
+                          </a>
                       </div>
                   </div>
               </div>
@@ -483,7 +509,7 @@
       </div>
       <div class="modal-body">
           <div class="content-naEstrada top-modal">
-              <div class="box-img-naEstrada demo-img1 modal-box-title">
+              <div class="box-img-naEstrada demo-img1">
               </div>
               <div class="txt-naEstrada" style="padding-top:20px;">
                   <p>A Tech Trip não é só pra assistir, é pra por a mão na massa também. Ficou interessado em algum dos projetos realizados na viagem? Dê uma olhada nos links para ver o que você pode começar a fazer hoje mesmo!</p>
@@ -523,7 +549,7 @@
   </div>
 </div>
 
-<div id="modal-blog" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+<div id="modal-blog" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -564,43 +590,6 @@
   </div>
 </div>
 
-<div id="modal-live" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <div class="top-modal">
-              <div class="blog-content">
-
-                  <div class="container">
-                      <div class="row blog-title-level">
-                          <div class="col-md-12 col-sm-12 col-xs-12 blog-title">
-                              Reveja as lives da Tech Trip - Senger Family
-                          </div>
-                      </div>
-                    </div>
-                    <div class="row live-content">
-                        <div class="live-to-review col-md-6 col-sm-12 col-xs-12">
-                            <iframe onload="autoResize(this)" height="100%" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fvsenger%2Fvideos%2F10155069498300827%2F&show_text=true&appId=472942732746686" width="100%" style="border:none;overflow:hidden;height:auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                        </div>
-                        <div class="live-to-review col-md-6 col-sm-12 col-xs-12">
-                            <iframe onload="autoResize(this)" height="100%" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fvsenger%2Fvideos%2F10155059541585827%2F&show_text=true&appId=472942732746686" width="100%" height="365" style="border:none;overflow:hidden;height:auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                        </div>
-                    </div>
-                  </div>
-
-                  <div style="clear:both"></div>
-              </div>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
@@ -622,29 +611,75 @@
 
         
         <!-- build:js scripts/app.js -->
-        <script src="scripts/app.js"></script>
         <script src="scripts/top-area.js"></script>
-        <script src="scripts/modal.js"></script>
+        <script src="scripts/app.js"></script>
         <script src="scripts/images.js"></script>
         <script src="scripts/instagram.js"></script>
+        <script src="scripts/temp.js"></script>
         <script src="scripts/email.js"></script> 
         <script src="scripts/menu-mobile.js"></script> 
-        <script src="scripts/youtube.js"></script> 
-        <script src="scripts/fblive.js"></script> 
         <!-- endbuild -->
+        
+        <script type="text/javascript">
 
-        <script>
+            
 
+            // var videoManager = {
+            //     getInfo: function(data){
+            //         return {
+            //             link: data.snippet.resourceId.videoId
+            //             , thumbnails: data.snippet.thumbnails.default.url
+            //             , description : data.snippet.title
+            //         }
+            //     },
+            //     createBox: function(info){
+            //         var templatebox = '<a href="[link]" target="_blank"><div class="video-item"><img width="98%" src="[srcImg]"></div><div class="box-multline-doted video-title">[description]</div></a>';
+            //         var videoLink = "https://www.youtube.com/watch?v=" + info.link;
+            //         templatebox = templatebox.replace('[link]', videoLink);
+            //         templatebox = templatebox.replace('[srcImg]', info.thumbnails);
+            //         templatebox = templatebox.replace('[description]', info.description);
+
+            //         return templatebox;
+            //     }
+            // }
+
+            // $.getJSON('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLGnT8xGNnv3f728Li3oLISyXqp7Jzs6u_&key=AIzaSyArZ8VfK84ZHCbwi5Phvjt7Hs5CzFU7WPQ&maxResults=15', function(data) {
+            //     console.log(data);
+            //     var size = data.items.length;
+            //     var videos = '';
+            //      for(var i=0; i<size; i++) {
+            //         videos += videoManager.createBox(videoManager.getInfo(data.items[i])); 
+            //     }
+                
+            //     $('.video-maker .videos').append(videos);
+            // });
+
+
+            // MODELO:
+            // <a href="#">
+            //     <div class="video-item">
+            //         <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
+            //     </div>
+            //     <div class="box-multline-doted video-title">
+            //         Texto sobre o video explicando alguma bagaça com um texto um pouco maior pra ver ocupar duas linhas do baralho
+            //     </div>
+            // </a>
+
+// youtube 
+// https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLGnT8xGNnv3f728Li3oLISyXqp7Jzs6u_&key=AIzaSyArZ8VfK84ZHCbwi5Phvjt7Hs5CzFU7WPQ&maxResults=20
         </script>
 
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-88920135-1');ga('send','pageview');
+            ga('create','88920135-1');ga('send','pageview');
         </script>
+
+
         
     </body>
 </html>

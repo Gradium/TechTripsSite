@@ -1,0 +1,98 @@
+////////////////////////////////////////////////////////////////
+/// EXEMPLO DE MODAL
+////////////////////////////////////////////////////////////////
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 id="myLargeModalLabel">Large modal</h4>
+      </div>
+      <div class="modal-body">
+          ...
+      </div>
+    </div>
+  </div>
+</div>
+
+
+////////////////////////////////////////////////////////////////
+/// VIDEOS YOUTUBE
+////////////////////////////////////////////////////////////////
+
+
+
+<div id="modal-videos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p class="modal-title-video">Qual a melhor maneira de conhecer o Vale do Silício sem sair de sua cadeira? E aprender mais sobre IoT, desenvolvimento de soluções e negócios da economia criativa? Estes são os conteúdos que você vai encontrar aqui, com a experiência dos Senger nestas áreas e um super alto astral. E claro, vai ver também dicas de surf, comida e viagens de motorhome. Aproveite com a gente!.</p>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+              <div class="row"> 
+                  <div class="col-md-3 video-maker">
+                      <h4>Maker</h4>
+                      <div class="videos">
+                          <a href="#">
+                            <div class="video-item">
+                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
+                            </div>
+                            <p class="video-title">Texto sobre o video</p>
+                          </a>
+                          <a href="#">
+                            <div class="video-item">
+                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
+                            </div>
+                            <div class="box-multline-doted video-title">
+                                Texto sobre o video explicando alguma bagaça com um texto um pouco maior pra ver ocupar duas linhas do baralho
+                            </div>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-md-3 video-motorhome">
+                      <h4>Motorhome</h4>
+                      <div class="videos">
+                          <a href="#">
+                            <div class="video-item">
+                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
+                            </div>
+                            <p class="video-title">Texto sobre o video explicando alguma bagaça</p>
+                          </a>
+                          <a href="#">
+                            <div class="video-item">
+                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
+                            </div>
+                            <p class="video-title">Texto sobre o video</p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-md-3 video-educacao">
+                      <h4>Educação</h4>
+                      <div class="videos">
+                          <a href="#">
+                            <div class="video-item">
+                                <img id="img" class="style-scope yt-img-shadow" width="98%" alt="undefined" src="https://i.ytimg.com/vi/fJZfGS8ci4I/hqdefault.jpg?custom=true&amp;w=246&amp;h=138&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=75ToMGzbL9fxWU1YZavwBXKjkQA">
+                            </div>
+                            <p class="video-title">TEXTO SOBRE O VIDEO</p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-md-3 video-dicas">
+                      <h4>Dicas e Curiosidades</h4>
+                      <div class="videos">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+#modal-instagram .modal-content{
+    overflow: hidden;
+    overflow-y: auto;
+    height: 970px;
+}
+
+#instafeed .item{
+    width: 20%;
+}
+
+.modal-header{
+    position: relative;
+    z-index: 10000;
+}
+.modal-body{
+    margin-top: -55px;
+}
+
+.ct-insta-txt .ct-insta-profile{
+    float: left;
+    text-align: left;
+}
+
+#profileImage {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 1em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+}
+
+.ct-insta-profile-id{
+    padding-left: 5px;
+    padding-top: 20px;
+}
+
+.ct-insta-profile-id div{
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.caption{
+    padding-top: 10px;
+}
+
+#ct-insta-img{
+    padding: 0 5%;
+}
+#insta-foto{
+    width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .ct-insta-profile-id {
+        padding-left: 5%;
+        padding-top: 0px;
+    }
+
+    #caption{
+        font-size: 0.8em;
+        line-height: 15px;
+        padding-bottom: 5%;
+    }
+
+    #profileImage {
+        width: 100px;
+        height: 100px;
+    }
+
+    #modal-instagram .modal-content{
+        height: auto;
+    }
+}

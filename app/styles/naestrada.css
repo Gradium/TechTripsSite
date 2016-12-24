@@ -1,0 +1,80 @@
+.box-img-naEstrada{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	width: 100%;
+    height: 200px;
+	position: relative;
+	top: 0px;
+    z-index: 100;
+    min-height: 200px;
+}
+
+.naEstrada-img1{
+    background:url('images/embarquenessatrip.png') no-repeat left center;
+}
+
+.naEstrada-img2{
+    background:url('images/lugaresincriveis.png') no-repeat left center;
+}
+
+.naEstrada-img3{
+    background:url('images/conteudodatrip.png') no-repeat left center;
+}
+
+@media screen and (max-width: 992px) {
+    .naEstrada-img1,
+    .naEstrada-img2,
+    .naEstrada-img3{
+        background-size: 150%;
+        min-height: auto;
+        height: 60px;
+    }
+}
+
+.txt-naEstrada{
+    padding-bottom: 35px;
+}
+.txt-naEstrada h2{
+    padding: 35px 0px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.txt-naEstrada p{
+    text-align: justify;
+    line-height: 25px;
+    text-indent: 50px;
+}
+
+.txt-naEstrada p span{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.txt-naEstrada ul{
+    margin-left: 50px;
+    list-style-type: none;
+}
+
+.txt-naEstrada ul > li {
+  text-indent: 5px;
+  line-height: 20px;
+}
+.txt-naEstrada ul > li:before {
+  content: "-";
+  text-indent: 5px;
+}
+
+@media screen and (max-width: 992px) {
+    .txt-naEstrada p{
+        text-align: justify;
+        line-height: 20px;
+        text-indent: 25px;
+    }
+
+    .txt-naEstrada ul{
+        margin-left: 5px;
+    }
+}
